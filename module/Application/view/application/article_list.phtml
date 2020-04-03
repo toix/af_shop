@@ -1,0 +1,15 @@
+<h1 class="mt-3">Article List</h1>
+
+<?php foreach ($this->articles as $article) { ?>
+    <a href="<?php echo $this->BasePath('detail?id='. $article['article_id']); ?>">
+        <div class="media">
+            <img src="<?php echo 'img/'. $article['file_name'] ?>" width="60" class="mr-3" alt="<?php echo $article['file_name'] ?>">
+            <div class="media-body">
+                <h5 class="mt-0">
+                    <?php echo $article['article_heading'] ?><br/>
+                    <small class="text-muted"><?php echo $article['article_subtitle'] ?></small>
+                </h5>
+            </div>
+        </div>
+    </a>
+<?php } ?>
